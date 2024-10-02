@@ -6,4 +6,4 @@ An instagram clone I worked on, using both server-side (Python/SQL backend) and 
 
 A user can create/edit/delete their account information, create a post with a caption, comment, like posts, and follow/unfollow any user.
 
-Please watch a video for a demonstration of these features.
+Please watch the video for a demonstration of these features.
