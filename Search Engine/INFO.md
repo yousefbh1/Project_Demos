@@ -9,4 +9,4 @@ A user can adjust the degree of PageRank weight in order to bias link analysis m
 
 Please watch the video for a demonstration of these features.
 
-_Please note that the source code is kept private, but can be shared if request_
+_Please note that the source code is kept private, but can be shared if requested_
