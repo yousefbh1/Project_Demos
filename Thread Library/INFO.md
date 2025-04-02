@@ -1,14 +1,8 @@
-Sure! Here's a clean, professional `INFO.md`-style write-up that explains the main features of your thread library project, based on the headers you shared:
-
----
-
 # Cooperative Thread Library
 
 This project implements a cooperative user-level threading library in C++, built on top of `ucontext.h`. It provides lightweight thread management, mutual exclusion via mutexes, and coordination between threads using condition variables.
 
 The library is designed to simulate multithreaded execution without relying on kernel threads, giving fine-grained control over scheduling, synchronization, and context switching.
-
----
 
 ## Thread Management (`thread.h`)
 
@@ -21,8 +15,6 @@ This header defines the core thread abstraction, along with the interface availa
 - **Resource management:** The thread constructor and destructor manage stack allocation and deallocation.
 - **Thread-local IDs and state tracking:** Includes facilities to track thread IDs and join queues.
 
----
-
 ## CPU Simulation (`cpu.h`)
 
 This header defines the interface to the simulated CPU abstraction. The infrastructure bootstraps multiple CPUs and delivers timer and inter-processor interrupts to drive scheduling.
@@ -33,9 +25,6 @@ This header defines the interface to the simulated CPU abstraction. The infrastr
 - **Preemption model:** Interrupts can be delivered synchronously or asynchronously based on the configuration.
 - **Ready queue & scheduling:** Maintains a shared ready queue and supports selecting the next thread to run.
 - **Thread wrapper logic:** Handles the lifecycle of a thread, including cleanup of terminated threads.
-- **Assertions for correctness:** Includes checks to ensure proper interrupt state for thread safety.
-
----
 
 ## Mutual Exclusion (`mutex.h`)
 
@@ -47,8 +36,6 @@ The `mutex` class provides basic locking mechanisms to ensure safe access to sha
 - **Blocking semantics:** Threads attempting to acquire a held lock will be placed in a blocking queue until the mutex becomes available.
 - **Move-only semantics:** Copying is disabled to prevent unintended behavior, but move support is optional.
 
----
-
 ## Condition Variables (`cv.h`)
 
 The `cv` class provides condition variable support to allow threads to wait and be notified of changes in shared state.
@@ -57,8 +44,6 @@ The `cv` class provides condition variable support to allow threads to wait and 
 - **Wait interface:** A thread can call `wait(mutex&)` to atomically release the lock and suspend execution until notified.
 - **Signal and broadcast:** `signal()` wakes a single waiting thread, while `broadcast()` wakes all waiting threads.
 - **Blocking queue:** Internally maintains a queue of threads waiting on the condition.
-
----
 
 Please watch the video for a demonstration of these features.
 
