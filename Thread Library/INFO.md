@@ -4,7 +4,7 @@ This project implements a cooperative user-level threading library in C++, built
 
 The library is designed to simulate multithreaded execution without relying on kernel threads, giving fine-grained control over scheduling, synchronization, and context switching.
 
-## Thread Management (`thread.h`)
+## Thread Management
 
 This header defines the core thread abstraction, along with the interface available to user applications.
 
@@ -15,7 +15,7 @@ This header defines the core thread abstraction, along with the interface availa
 - **Resource management:** The thread constructor and destructor manage stack allocation and deallocation.
 - **Thread-local IDs and state tracking:** Includes facilities to track thread IDs and join queues.
 
-## CPU Simulation (`cpu.h`)
+## CPU Simulation
 
 This header defines the interface to the simulated CPU abstraction. The infrastructure bootstraps multiple CPUs and delivers timer and inter-processor interrupts to drive scheduling.
 
@@ -26,7 +26,7 @@ This header defines the interface to the simulated CPU abstraction. The infrastr
 - **Ready queue & scheduling:** Maintains a shared ready queue and supports selecting the next thread to run.
 - **Thread wrapper logic:** Handles the lifecycle of a thread, including cleanup of terminated threads.
 
-## Mutual Exclusion (`mutex.h`)
+## Mutual Exclusion
 
 The `mutex` class provides basic locking mechanisms to ensure safe access to shared resources between threads.
 
@@ -36,7 +36,7 @@ The `mutex` class provides basic locking mechanisms to ensure safe access to sha
 - **Blocking semantics:** Threads attempting to acquire a held lock will be placed in a blocking queue until the mutex becomes available.
 - **Move-only semantics:** Copying is disabled to prevent unintended behavior, but move support is optional.
 
-## Condition Variables (`cv.h`)
+## Condition Variables
 
 The `cv` class provides condition variable support to allow threads to wait and be notified of changes in shared state.
 
