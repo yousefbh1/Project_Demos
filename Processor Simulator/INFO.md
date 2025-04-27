@@ -44,7 +44,7 @@ The simulator supports the following LC-2K instructions:
 
 **Memory and I/O**
 
-- Instructions and data are read from a text file at startup.
+- Instructions and data are read from a text file containing machine mode at startup.
 - Output shows detailed per-cycle state, including PC, register contents, pipeline registers, and memory.
 
 **Execution Model**
