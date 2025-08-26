@@ -1,6 +1,6 @@
 TaskQueue
 
-Built using: Go, gRPC, RabbitMQ, Redis, Docker, Prometheus, Grafana, GitHub Actions (CI/CD)
+Built using: Go, gRPC, RabbitMQ, Redis, Docker, GitHub Actions (CI/CD)
 
 A distributed task queue system I developed, demonstrating enterprise-grade messaging and worker orchestration. Jobs are submitted via a gRPC API, which validates requests, enforces idempotency, writes metadata into Redis, and publishes tasks to RabbitMQ with priority scheduling.
 
